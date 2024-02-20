@@ -1,0 +1,27 @@
+﻿@model RelationShipAsp.Models.State
+
+<div class="container">
+    <form asp-action="CreateOrEdit" asp-controller="State" method="post">
+
+        <div class="row">
+
+            <div class="col-md-6">
+
+
+                <select class="form-control" asp-for="CountryId" asp-items="@ViewBag.CountryId">
+                  <option value="">--Select Country Name--</option>
+              </select>
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="col-md-6">
+
+                <input class="form-control" asp-for="Name" placeholder="Enter Your State Name " />
+                <span asp-validation-for="Name" class="text-danger"></span>
+
+                <input class="btn btn-sm btn-success mt-4" type="submit" value="Save" />
+            </div>
+
+        </div>
+    </form>
+
+</div>

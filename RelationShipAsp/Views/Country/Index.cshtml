@@ -1,0 +1,32 @@
+﻿@model IEnumerable<RelationShipAsp.Models.Country>
+@{
+    int idNo = 1;
+}
+
+<div class="container">
+    <table class="table table-responsive ">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Country Name</th>
+                <th>Action</th>
+            </tr>
+
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@idNo</td>
+                    <td>@item.Name</td>
+                    <td>
+                        <a class=" btn btn-sm btn-primary" asp-action="CreateOrEdit" asp-controller="Country" asp-route-id="@item.Id">Edit</a> |
+                        <a class=" btn btn-sm btn-danger" asp-action="Delete" asp-controller="Country" asp-route-id="@item.Id" onclick="return confirm('Are you sure you delete this!')">Delete</a>
+                    </td>
+                </tr>
+                idNo++;
+            }
+        </tbody>
+
+    </table>
+</div>

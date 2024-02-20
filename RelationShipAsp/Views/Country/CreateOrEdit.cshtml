@@ -1,0 +1,16 @@
+﻿@model RelationShipAsp.Models.Country
+@{
+
+}
+<div class=" container  mt-5">
+    <form asp-action="CreateOrEdit" asp-controller="Country" method="post" >
+        <div class="row">
+            <div class="col-md-6">
+               <input class="form-control" asp-for="Name" placeholder="Enter Your Country Name." />
+               <span asp-validation-for="Name" class="text-danger"></span>
+                <input type="submit" class=" btn btn-sm btn-success mt-4" value="Save" />
+            </div>
+            
+        </div>
+    </form>
+</div>

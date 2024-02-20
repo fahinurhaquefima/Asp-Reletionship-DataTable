@@ -1,0 +1,33 @@
+﻿@model IEnumerable<RelationShipAsp.Models.State>
+
+@{
+    int idNO = 1;
+}
+
+   <div class="container">
+       
+           <table class="table table-responsive">
+               <thead>
+                   <tr>
+                       <th>#</th>
+                       <th>Name</th>
+                <th>CountryId</th>
+                   </tr>
+               </thead>
+
+               <tbody>
+            @foreach(var item in Model)
+            {
+                <tr>
+                    <td>@idNO</td>
+                    <td>@item.Name</td>
+                    <td>@item.CountryId</td>
+                </tr>
+            }
+        </tbody>
+
+           </table>
+
+      
+
+   </div>
